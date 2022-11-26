@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+    </div>
+     <script>
+        //1,2,3,5,8
+        let arr=[]
+     function addnum(a,b){
+    // console.log(a);
+      let c = a+b
+      if(arr.length<3){
+          arr.push(a)
+          arr.push(b)
+      }
+       arr.push(c) 
+     }
+addnum(1,2)
+arr.map(
+    (element)=>{
+        for(let i =0;i<20;i++){
+            if(arr.length==3){
+                addnum(arr[arr.length-2],arr[arr.length-1])
+            }else{
+                addnum(arr[arr.length-2],arr[arr.length-1])
+            }
+            if(arr[arr.length-1]>4000000){
+                break;
+            }
+        }
+    }
+    )
+    console.log(arr);
+let sum =0
+arr.forEach((element
+)=>{
+    if(element%2==0){
+        console.log(element);
+         sum+element
+        }
+        // console.log(sum);
+})
+// console.log(arr);
+    </script>
+</body>
+</html>
